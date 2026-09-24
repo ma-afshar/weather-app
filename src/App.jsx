@@ -9,9 +9,15 @@ function App() {
   const API_KEY = "2798827f6c023282579eed21db561182";
 
   const fetchWeather = async () => {
+    const trimmedCity = city.trim();
+    if (!trimmedCity) {
+      alert("Please enter a city name.");
+      return;
+    }
+
     try {
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(trimmedCity)}&appid=${API_KEY}&units=metric`
       );
       const data = await res.json();
 
