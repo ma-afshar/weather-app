@@ -8,13 +8,13 @@ The background dynamically changes between **day/night themes** based on the loc
 
 ## 🚀 Features
 
-- 🔍 Search for any city
+- 🔍 Search for cities, including names with spaces; extra whitespace is ignored
 - 🌡️ Real-time temperature, humidity, and wind data
 - 🌇 Dynamic background based on day or night
 - ☁️ Weather icons update automatically (clear, cloudy, rain, etc.)
 - 📱 Fully responsive UI (mobile-first)
 - ⚡ Built with React + TailwindCSS for performance and speed
-- ❌ Graceful handling of invalid cities
+- ❌ Empty searches are blocked, and invalid cities show an error
 
 ---
 
